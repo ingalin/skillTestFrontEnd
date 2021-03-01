@@ -35,10 +35,6 @@ header {
     bottom: 50px;
 }
 
-.container_skitter {
-    z-index: -10;
-}
-
 .skitter .info_slide_dots .image_number {
     border: 1px $textColor solid;
     background-color: $secondaryFont;

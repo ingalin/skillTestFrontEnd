@@ -1,0 +1,185 @@
+// Header navigation 
+// nav {
+//     // position: sticky;
+// }
+
+// .headerMenuDrop {
+//         position: fixed;
+
+// }
+
+// .activeNav {
+//     text-decoration: underline;
+//     text-underline-offset: 0.5rem;
+//     text-decoration-thickness: 0.2rem;
+// }
+
+.mobileMenu button {
+    display: none;
+}
+
+nav ul {
+    // background-color: green;
+    // z-index: 120;
+    li {
+        margin-left: 25px;
+            // z-index: 11;
+        a {
+            text-transform: uppercase;
+            letter-spacing: 2.3px;
+            min-width: 150px;
+            display: block;
+            text-align: center;
+
+        }
+    }
+}
+
+//////
+    .headerMenuDrop {
+            padding-top: 20px;
+
+        position: fixed;
+        top: -20%;
+        left: -8%;
+        z-index: 600;
+        .mobileMenu {
+            display: flex;
+            flex-direction: column;
+            // align-items: flex-end;
+
+            button {
+                font-size: 3.5rem;
+                // color: $textColor;
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+                display: block;
+                border: none;
+                background: none;
+                padding: 5px 20px 5px 100px;
+                border: 3px solid transparent;
+                display: flex;
+                align-items: center;
+                z-index: 50;
+                position: relative;
+                margin-top: 150px;
+                margin-left: 5%;
+                i {
+                    font-size: 4rem;
+                    margin-right: 15px;
+                }
+                span {
+                    margin-left: 5px;
+                    padding-left: 5px;
+                    border-left: 2px solid $textColor;
+                }
+            }
+        }
+
+        .mobileMenu li {
+            position: relative;
+            a {
+                display: inline-block;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                color: $textColor;
+                font-weight: bold;
+                font-size: 3rem;
+                text-align: left;
+                min-width: 200px;
+            }
+        }
+
+        // .mobileMenu button:focus-within {
+        //     i {
+        //         color: $secondaryFont;
+        //     }
+        // }
+
+        ul.mobileSubMenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mobileMenu li:focus-within ul.mobileSubMenu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mobileSubMenu li {
+            display: block;
+            margin: 0;
+            animation: 2s listItems ease-out;
+
+        }
+    
+        ul.mobileSubMenu li a {
+            width: 100%;
+            margin: 0;
+        }
+    
+        // .mobileSubMenu li:focus-within a, .mobileSubMenu li:hover a {
+        //     // color: $secondaryFont;
+        // }
+    
+        .mobileMenu li:focus-within .middleList {
+            display: none;
+        }
+    
+        .mobileMenu li:focus-within li:nth-child(2), .mobileMenu li:focus-within li:nth-child(5)  {
+            border-top: none;
+        }
+    
+        .mobileMenu li:focus-within li:nth-child(2) {
+            border-bottom: none;
+        }
+    }
+
+
+    .headerMenuDrop ul.mobileSubMenu {
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        z-index: 3;
+        padding-top: 100px;
+        padding-left: 70px;
+        animation: 2s createBox ease-out;
+    }
+
+    // Menu color change
+    .colorChange1 {
+        background-color: $menuColorBackgroundLight;
+    }
+
+    .colorChange1 li:focus-within a, .colorChange1 li:hover a {
+        color: black;
+    }
+
+    .buttonColor1 {
+        color: $textColor;
+    }
+
+    .colorChange2 {
+        background-color: $secondaryFont;
+    }
+
+
+
+    .colorChange2 li:focus-within a, .colorChange2 li:hover a {
+        color: $menuColorBackgroundMedium;
+    }
+
+    .buttonColor2:focus-within {
+        color: $menuColorBackgroundMedium;
+    }
+
+
+

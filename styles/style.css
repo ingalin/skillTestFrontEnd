@@ -252,10 +252,56 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 h1 {
   letter-spacing: 7px;
   line-height: 3.5rem;
   text-transform: uppercase;
+}
+
+section {
+  height: 100vh;
+}
+
+@-webkit-keyframes createBox {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    margin-top: -500px;
+    margin-left: -200px;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes createBox {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    margin-top: -500px;
+    margin-left: -200px;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes listItems {
+  from {
+    margin-top: -500px;
+  }
+}
+
+@keyframes listItems {
+  from {
+    margin-top: -500px;
+  }
 }
 
 header {
@@ -299,10 +345,6 @@ header {
 
 .skitter .info_slide_dots {
   bottom: 50px;
-}
-
-.container_skitter {
-  z-index: -10;
 }
 
 .skitter .info_slide_dots .image_number {
@@ -394,4 +436,171 @@ header {
 
 .btn-mix-noborder::after {
   background: transparent !important;
+}
+
+.mobileMenu button {
+  display: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  letter-spacing: 2.3px;
+  min-width: 150px;
+  display: block;
+  text-align: center;
+}
+
+.headerMenuDrop {
+  padding-top: 20px;
+  position: fixed;
+  top: -20%;
+  left: -8%;
+  z-index: 600;
+}
+
+.headerMenuDrop .mobileMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.headerMenuDrop .mobileMenu button {
+  font-size: 3.5rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: block;
+  border: none;
+  background: none;
+  padding: 5px 20px 5px 100px;
+  border: 3px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 50;
+  position: relative;
+  margin-top: 150px;
+  margin-left: 5%;
+}
+
+.headerMenuDrop .mobileMenu button i {
+  font-size: 4rem;
+  margin-right: 15px;
+}
+
+.headerMenuDrop .mobileMenu button span {
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 2px solid white;
+}
+
+.headerMenuDrop .mobileMenu li {
+  position: relative;
+}
+
+.headerMenuDrop .mobileMenu li a {
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: left;
+  min-width: 200px;
+}
+
+.headerMenuDrop ul.mobileSubMenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.headerMenuDrop .mobileMenu li:focus-within ul.mobileSubMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerMenuDrop .mobileSubMenu li {
+  display: block;
+  margin: 0;
+  -webkit-animation: 2s listItems ease-out;
+          animation: 2s listItems ease-out;
+}
+
+.headerMenuDrop ul.mobileSubMenu li a {
+  width: 100%;
+  margin: 0;
+}
+
+.headerMenuDrop .mobileMenu li:focus-within .middleList {
+  display: none;
+}
+
+.headerMenuDrop .mobileMenu li:focus-within li:nth-child(2), .headerMenuDrop .mobileMenu li:focus-within li:nth-child(5) {
+  border-top: none;
+}
+
+.headerMenuDrop .mobileMenu li:focus-within li:nth-child(2) {
+  border-bottom: none;
+}
+
+.headerMenuDrop ul.mobileSubMenu {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  z-index: 3;
+  padding-top: 100px;
+  padding-left: 70px;
+  -webkit-animation: 2s createBox ease-out;
+          animation: 2s createBox ease-out;
+}
+
+.colorChange1 {
+  background-color: #1fe1e9;
+}
+
+.colorChange1 li:focus-within a, .colorChange1 li:hover a {
+  color: black;
+}
+
+.buttonColor1 {
+  color: white;
+}
+
+.colorChange2 {
+  background-color: black;
+}
+
+.colorChange2 li:focus-within a, .colorChange2 li:hover a {
+  color: red;
+}
+
+.buttonColor2:focus-within {
+  color: red;
 }
