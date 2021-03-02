@@ -177,13 +177,30 @@ nav ul {
     }
 
     .headerMenuDrop .mobileMenu .buttonColor2:focus-within span {
-
         border-left: 2px solid $menuColorBackgroundMedium;
     }
 
     .buttonColor2:focus-within {
         color: $menuColorBackgroundMedium;
     }
+
+    .colorChange3 {
+        background-color: $secondaryFont;
+    }
+
+    .colorChange3 li:focus-within a, .colorChange3 li:hover a {
+        color: $backgroundSection2;
+    }
+
+    .headerMenuDrop .mobileMenu .buttonColor3:focus-within span {
+        border-left: 2px solid $backgroundSection2;
+    }
+
+    .buttonColor3:focus-within {
+        color: $backgroundSection2;
+    }
+
+
 
 
 

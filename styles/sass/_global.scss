@@ -78,6 +78,23 @@ h2 {
     margin-bottom: 30px;
 }
 
+h3 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    &:after {
+        position: absolute;
+        content: '';
+        height: 0.2rem;
+        // bottom: 1.8rem; 
+        margin-left: 220px;
+        left: -80%;
+        top: -2rem;
+        width: 100px;
+    }
+}
+
 
 
 

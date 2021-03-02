@@ -279,6 +279,23 @@ h2 {
   margin-bottom: 30px;
 }
 
+h3 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h3:after {
+  position: absolute;
+  content: '';
+  height: 0.2rem;
+  margin-left: 220px;
+  left: -80%;
+  top: -2rem;
+  width: 100px;
+}
+
 @-webkit-keyframes createBox {
   from {
     -webkit-transform: scale(0);
@@ -623,13 +640,29 @@ nav ul li a {
   color: #d34848;
 }
 
-.section1 {
+.colorChange3 {
+  background-color: black;
+}
+
+.colorChange3 li:focus-within a, .colorChange3 li:hover a {
+  color: #ffb33f;
+}
+
+.headerMenuDrop .mobileMenu .buttonColor3:focus-within span {
+  border-left: 2px solid #ffb33f;
+}
+
+.buttonColor3:focus-within {
+  color: #ffb33f;
+}
+
+.section1, .section2 {
   background-color: #d34848;
   min-height: 605px;
   padding: 30px 0;
 }
 
-.section1 button {
+.section1 button, .section2 button {
   background-color: transparent;
   border: none;
   margin: 0;
@@ -637,14 +670,14 @@ nav ul li a {
   text-align: right;
 }
 
-.section1 button img {
+.section1 button img, .section2 button img {
   max-width: 100%;
   height: auto;
   display: block;
   max-height: 100%;
 }
 
-.section1 p {
+.section1 p, .section2 p {
   color: black;
   font-size: 3.5rem;
   padding-bottom: 50px;
@@ -679,7 +712,7 @@ nav ul li a {
   width: 40%;
 }
 
-.section1 .button {
+.section1 .button, .section2 .button {
   display: block;
   position: relative;
   -webkit-appearance: none;
@@ -738,13 +771,17 @@ nav ul li a {
           justify-content: flex-end;
 }
 
-.section1 .demo {
+.section1 .demo, .section2 .demo {
   padding: 20px 40px;
   font-size: 1.8rem;
 }
 
 .section1 .png {
   cursor: url("../images/click.png"), auto;
+}
+
+.section2 .png {
+  cursor: url("../images/reveal.png"), auto;
 }
 
 .section2 {
@@ -763,6 +800,16 @@ nav ul li a {
 .section2Text {
   position: relative;
   margin-bottom: -600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .section2 img {
@@ -770,7 +817,77 @@ nav ul li a {
   position: relative;
 }
 
-.section2 h2 {
+.section2 h2, .section2 p, .section2 a {
   position: relative;
   z-index: 5;
+}
+
+.textSection2 {
+  width: 60%;
+  margin-top: 150px;
+}
+
+.section3 {
+  min-height: 100vh;
+  background-color: black;
+}
+
+.section3 h2 {
+  margin-bottom: 100px;
+}
+
+.section3Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section3TextGroups {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section3TextGroups div {
+  width: 24%;
+}
+
+.section3TextGroups p {
+  font-weight: 1.8rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.text1 h3 {
+  color: #d34848;
+}
+
+.text1 h3::after {
+  background: #d34848;
+}
+
+.text2 h3 {
+  color: #1fe1e9;
+}
+
+.text2 h3::after {
+  background: #1fe1e9;
+}
+
+.text3 h3 {
+  color: #ffb33f;
+}
+
+.text3 h3::after {
+  background: #ffb33f;
 }

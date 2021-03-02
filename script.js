@@ -20,10 +20,30 @@ $(document).ready(function () {
     });
 
     // Change color menu, check if it's scorlled, if it is, change color
+    // $(window).scroll(function () {
+    //     if (($(document).scrollTop() > ($("header").height()) - 40)) 
+    //     {
+    //         $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange1").addClass("colorChange2");
+    //         $(".menuButton").addClass("buttonColor2");
+    //     }
+    //     else {
+    //         $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange2").addClass("colorChange1");
+    //         $(".menuButton").removeClass("buttonColor2").addClass("buttonColor1");
+    //     }
+    // });
+
+
     $(window).scroll(function () {
-        if ($(document).scrollTop() > ($("header").height())-40) {
-            $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange1").addClass("colorChange2");
-            $(".menuButton").addClass("buttonColor2");
+        if ($(document).scrollTop() > ($(".section1").height() + $("header").height()) - 40) {
+            $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange2").addClass("colorChange3");
+            $(".menuButton").addClass("buttonColor3");
+        }
+        else if (($(document).scrollTop() < ($(".section1").height() + $("header").height()) - 40) && 
+            ($(document).scrollTop() > ($("header").height()) - 40))
+        {
+            $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange3").addClass("colorChange2");
+            $(".menuButton").removeClass("buttonColor3").addClass("buttonColor2");
+
         }
         else {
             $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange2").addClass("colorChange1");

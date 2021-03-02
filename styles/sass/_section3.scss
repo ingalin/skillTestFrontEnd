@@ -1,0 +1,47 @@
+.section3 {
+    min-height: 100vh;
+    background-color: $secondaryFont;
+    h2 {
+        margin-bottom: 100px;
+    }
+}
+
+.section3Info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section3TextGroups {
+    display: flex;
+    justify-content: space-between;
+    div {
+        width: 24%;
+    }
+    p {
+        font-weight: 1.8rem;
+        letter-spacing: 1px;
+        color: $textColor;
+    }
+}
+
+.text1 h3{
+    color: $menuColorBackgroundMedium;
+    &::after{
+        background: $menuColorBackgroundMedium;
+    }
+}
+
+.text2 h3{
+    color: $menuColorBackgroundLight;
+    &::after{
+        background: $menuColorBackgroundLight;
+    }
+}
+
+.text3 h3{
+    color: $backgroundSection2;
+    &::after{
+        background: $backgroundSection2;
+    } 
+}

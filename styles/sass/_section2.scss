@@ -1,3 +1,4 @@
+// Section 2
 .section2{
     min-height: 100vh;
     background-color: $backgroundSection2;
@@ -13,6 +14,9 @@
 .section2Text {
     position: relative;
     margin-bottom: -600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .section2 img {
@@ -20,11 +24,17 @@
     position: relative;
 }
 
-.section2 h2 {
+.section2 h2, .section2 p, .section2 a {
     position: relative;
     z-index: 5;
-
 }
+
+.textSection2 {
+    width: 60%;
+    margin-top: 150px;
+}
+
+
 
 
 
