@@ -212,20 +212,6 @@ html {
           box-sizing: inherit;
 }
 
-.srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -588,8 +574,8 @@ nav ul li a {
 .headerMenuDrop .mobileSubMenu li {
   display: block;
   margin: 0;
-  -webkit-animation: 2s listItems ease-out;
-          animation: 2s listItems ease-out;
+  -webkit-animation: 1.5s listItems ease-out;
+          animation: 1.5s listItems ease-out;
 }
 
 .headerMenuDrop ul.mobileSubMenu li a {
@@ -740,7 +726,7 @@ nav ul li a {
   width: 40%;
 }
 
-.section1 .button, .section2 .button, .section4 .button {
+.section1 .button, .section2 .button, .section4 .button, .eachPrice .button {
   display: block;
   position: relative;
   -webkit-appearance: none;
@@ -799,7 +785,7 @@ nav ul li a {
           justify-content: flex-end;
 }
 
-.section1 .demo, .section2 .demo {
+.section1 .demo, .section2 .demo, .eachPrice .demo {
   padding: 20px 40px;
   font-size: 1.8rem;
 }
@@ -858,15 +844,15 @@ nav ul li a {
   margin-top: 150px;
 }
 
-.section3 {
+.section3, .pricesPerks {
   background-color: black;
 }
 
-.section3 h2 {
+.section3 h2, .pricesPerks h2 {
   margin: 100px 0 60px;
 }
 
-.section3 p {
+.section3 p, .pricesPerks p {
   font-weight: 1.8rem;
   letter-spacing: 1px;
   color: white;
@@ -955,7 +941,7 @@ nav ul li a {
 }
 
 .section4 h2 {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .section4 figure {
@@ -992,7 +978,7 @@ nav ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 300px;
+  margin-top: 250px;
 }
 
 .reviews {
@@ -1093,4 +1079,147 @@ nav ul li a {
   border-left: 2px solid white;
   margin-left: 5px;
   padding-left: 5px;
+}
+
+.prices {
+  background-color: black;
+  height: 170vh;
+  min-height: 1000px;
+}
+
+.prices p {
+  font-size: 3.5rem;
+}
+
+.priceHeader {
+  padding-bottom: 100px;
+}
+
+.priceInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 200px;
+}
+
+.priceLists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.priceLists div {
+  width: 30%;
+}
+
+.priceLists i {
+  font-size: 1.6rem;
+  margin-right: 10px;
+}
+
+.priceLists li {
+  letter-spacing: 2.5px;
+  font-size: 2.7rem;
+}
+
+.priceLists a {
+  margin-top: 30px;
+}
+
+.decorPriceHeader::before {
+  position: absolute;
+  content: '';
+  height: 0.2rem;
+  bottom: 23rem;
+  width: 100px;
+}
+
+.eachPrice1 .decorPriceHeader::before {
+  background: #d34848;
+}
+
+.eachPrice2 .decorPriceHeader::before {
+  background: #ffb33f;
+}
+
+.eachPrice3 .decorPriceHeader::before {
+  background: #1fe1e9;
+}
+
+.eachPrice1 h4, .eachPrice1 p {
+  color: #d34848;
+}
+
+.eachPrice2 h4, .eachPrice2 p {
+  color: #ffb33f;
+}
+
+.eachPrice3 h4, .eachPrice3 p {
+  color: #1fe1e9;
+}
+
+.eachPrice h4 {
+  font-size: 3rem;
+}
+
+.eachPrice p {
+  font-size: 10rem;
+  font-weight: 700;
+}
+
+.eachPrice1 .button {
+  background-color: #d34848;
+  color: white;
+}
+
+.eachPrice2 .button {
+  background-color: #ffb33f;
+  color: white;
+}
+
+.eachPrice3 .button {
+  background-color: #1fe1e9;
+  color: white;
+}
+
+.pricesPerks {
+  background-color: #d34848;
+}
+
+.pricesPerks .section3Info {
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 30px;
+}
+
+.pricesPerks .section3Info h2 {
+  margin-bottom: 70px;
+}
+
+.pricesPerks .section3Info h3 {
+  color: white;
+}
+
+.pricesPerks .section3Info h3::after {
+  background: white;
+}
+
+.pricesPerks .section3Info p {
+  color: black;
 }

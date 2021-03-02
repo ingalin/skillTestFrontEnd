@@ -42,7 +42,7 @@
 
 // Buttons Section 1
 
-.section1 .button, .section2 .button, .section4 .button {
+.section1 .button, .section2 .button, .section4 .button, .eachPrice .button {
   display: block;
   position: relative;
   -webkit-appearance: none;
@@ -93,7 +93,7 @@
     justify-content: flex-end;
 }
 
-.section1 .demo, .section2 .demo {
+.section1 .demo, .section2 .demo, .eachPrice .demo {
     padding: 20px 40px;
     font-size: 1.8rem;
 }
