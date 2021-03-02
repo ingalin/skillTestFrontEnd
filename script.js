@@ -38,9 +38,14 @@ $(document).ready(function () {
         const secOneHeight = $(".section1").height() + heightHeader;
         const secTwoHeight = $(".section2").height() + secOneHeight;
         const secThreeHeight = $(".section3").height() + secTwoHeight;
-
+        const footerHeight = $("footer").height() + secThreeHeight;
         let docScroll = $(document).scrollTop();
-        if (docScroll > secThreeHeight - 40) {
+
+        if (docScroll > footerHeight - 40) {
+            $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange4").addClass("colorChange1");
+            $(".menuButton").removeClass("buttonColor4").addClass("buttonColor1");
+        }
+        else if (docScroll > secThreeHeight - 40 && docScroll < footerHeight - 40) {
             $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange1").addClass("colorChange4");
             $(".menuButton").removeClass("buttonColor1").addClass("buttonColor4");
         }
@@ -52,12 +57,9 @@ $(document).ready(function () {
             $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange2").addClass("colorChange3");
             $(".menuButton").removeClass("buttonColor2").addClass("buttonColor3");
         }
-        else if (docScroll < (secOneHeight - 40) && 
-            docScroll > heightHeader - 40)
-        {
+        else if (docScroll < (secOneHeight - 40) && docScroll > heightHeader - 40){
             $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange3").addClass("colorChange2");
             $(".menuButton").removeClass("buttonColor3").addClass("buttonColor2");
-
         }
         else {
             $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange2").addClass("colorChange1");
