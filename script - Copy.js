@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     // Change color menu, check if it's scorlled, if it is, change color
     $(window).scroll(function () {
-        if ($(document).scrollTop() > ($("header").height())-40) {
+        if ($(document).scrollTop() > $("header").height()) {
             $(".headerMenuDrop ul.mobileSubMenu").removeClass("colorChange1").addClass("colorChange2");
             $(".menuButton").addClass("buttonColor2");
         }
@@ -34,6 +34,9 @@ $(document).ready(function () {
 
 
     // Audio
+
+    // instigate our audio context
+
     // for cross browser
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
@@ -75,56 +78,41 @@ $(document).ready(function () {
     // volume
     const gainNode = audioCtx.createGain();
 
+    const volumeControl = document.querySelector('[data-action="volume"]');
+    volumeControl.addEventListener('input', function () {
+        gainNode.gain.value = this.value;
+    }, false);
+
     // panning
     const pannerOptions = { pan: 0 };
     const panner = new StereoPannerNode(audioCtx, pannerOptions);
+
+    // const pannerControl = document.querySelector('[data-action="panner"]');
+    // pannerControl.addEventListener('input', function () {
+    //     panner.pan.value = this.value;
+    // }, false);
+
+    const pannerControl = 7;
+
+    // connect our graph
     track.connect(gainNode).connect(panner).connect(audioCtx.destination);
-    // Track credit: Outfoxing the Fox by Kevin MacLeod under Creative Commons 
+
+    const powerButton = document.querySelector('.control-power');
+
+    powerButton.addEventListener('click', function () {
+        if (this.dataset.power === 'on') {
+            audioCtx.suspend();
+            this.dataset.power = 'off';
+        } else if (this.dataset.power === 'off') {
+            audioCtx.resume();
+            this.dataset.power = 'on';
+        }
+        this.setAttribute("aria-checked", state ? "false" : "true");
+        console.log(audioCtx.state);
+    }, false);
+
+// Track credit: Outfoxing the Fox by Kevin MacLeod under Creative Commons 
 
 
-
-
-
-    // Buttons Section 1
-    document.querySelector('.button').onmousemove = function (e) {
-
-        var x = e.pageX - e.target.offsetLeft;
-        var y = e.pageY - e.target.offsetTop;
-
-        e.target.style.setProperty('--x', x + 'px');
-        e.target.style.setProperty('--y', y + 'px');
-    };
-
-
-
-    // Circles Section 2, add clipping paths
-      $(".section2").on("mouseover", function (event) {
-        let x = event.clientX;
-        let y = event.clientY;
-
-    var drawCircle = function (x, y) {
-        var $svg = $("#myClip");
-        $(SVG('circle'))
-            .attr('cx', x)
-            .attr('cy', y)
-            .attr('r', 100)
-            .appendTo($svg);
-    };
-
-    drawCircle(x, y);
-
-    function SVG(tag) {
-        return document.createElementNS('http://www.w3.org/2000/svg', tag);
-    }
-
-});
-
-////////////////////
-
-
-
-
-
-
-
+    
 });

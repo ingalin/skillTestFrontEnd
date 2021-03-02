@@ -1,0 +1,35 @@
+.section2{
+    min-height: 100vh;
+    background-color: $backgroundSection2;
+    overflow: hidden;
+}
+
+.clip-svg {
+  clip-path: url(#myClip);
+  width: 100%;
+  height: auto;
+}
+
+.section2Text {
+    position: relative;
+    margin-bottom: -600px;
+}
+
+.section2 img {
+    z-index: 4;
+    position: relative;
+}
+
+.section2 h2 {
+    position: relative;
+    z-index: 5;
+
+}
+
+
+
+
+
+
+
+

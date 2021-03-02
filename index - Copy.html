@@ -12,14 +12,6 @@
   <script src='https://code.jquery.com/jquery-3.5.1.js' integrity='sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc='
     crossorigin='anonymous'></script>
   <script src="script.js"></script>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
-      ">
-  <!-- ////// -->
 
   <!-- Skitter JS -->
   <script src="js/jquery-2.1.1.min.js"></script>
@@ -27,7 +19,6 @@
   <script src="dist/jquery.skitter.min.js"></script>
   <!-- Fontawsome -->
   <script src="https://kit.fontawesome.com/d50e3b07e2.js" crossorigin="anonymous"></script>
-
 
   <link rel="stylesheet" href="styles/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -85,85 +76,62 @@
       <a href="#prices" class="btn-mix-noborder" data-text="try it now">try it now</a>
     </div>
   </header>
-  <main>
-    <section class="section1">
-      <div class="wrapper">
+<main>
+  <section class="png section1">
+    <a href="#prices" class="btn-mix-noborder" data-text="try it now">try it now</a>
+    <h2>superior sound</h2>
+    <p>Experience live versions of your favourite songs</p>
 
-        <div class="tryOutButton">
-          <a href="#prices" class="button">
-            <span>try it now</span>
-          </a>
-        </div>
+    <button id="play" disabled>Yodel!</button>
+    
+<!-- kkkkkkkkkkkkkkkkkkkkkkkkkkkk -->
 
-        <div class="textImg">
-          <div class="textSec1">
-            <h2>superior sound</h2>
-            <p>Experience live versions of your favourite songs</p>
-            <a href="#" class="button demo">
-              <span>see demo</span>
-            </a>
-          </div>
+<div id="boombox">
+  <div class="boombox-handle"></div>
 
-          <div class="imgSec1">
-            <audio src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3" crossorigin="anonymous"></audio>
-            <button data-playing="false" class="tape-controls-play  png" role="switch" aria-checked="false"
-              aria-label="play or pause music">
-              <img src="images/imgbin_computer-speakers-jbl-es-series-es20bk-speakers-png.png"
-                alt="Photo of music speakers" />
-            </button>
-          </div>
-        </div>
-      </div>
+  <div class="boombox-body">
+
+    <section class="master-controls">
+      <input type="range" id="volume" class="control-volume" min="0" max="2" value="1" list="gain-vals" step="0.01"
+        data-action="volume" />
+      <datalist id="gain-vals">
+        <option value="0" label="min">
+        <option value="2" label="max">
+      </datalist>
+      <label for="volume">VOL</label>
+
+      <!-- <input type="range" id="panner" class="control-panner" list="pan-vals" min="-1" max="1" value="0" step="0.01"
+        data-action="panner" />
+      <datalist id="pan-vals">
+        <option value="-1" label="left">
+        <option value="1" label="right">
+      </datalist>
+      <label for="panner">PAN</label> -->
+
+      <button class="control-power" role="switch" aria-checked="false" data-power="on">
+        <span>On/Off</span>
+      </button>
     </section>
 
-    <section class="section2">
-      <div class="wrapper section2Text">
+    <section class="tape">
 
-        <div class="tryOutButton">
-          <a href="#prices" class="button">
-            <span>try it now</span>
-          </a>
-        </div>
+      <audio src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3" crossorigin="anonymous"></audio>
 
-        <div class="textImg">
-          <div class="textSec1">
-            <h2>superior sound</h2>
+      <!-- 			type="audio/mpeg" -->
 
-            <p data-text="Experience live versions of your favourite songs">Experience live versions of your favourite songs</p>
-            <a href="#" class="button demo">
-              <span>see demo</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-
-
-      <img class="clip-svg" src="images/sam-moqadam-CwCXGST3a7Q-unsplash.jpg" alt="Photo of the Concert">
-
-      <svg version="1.1" id="circle" width="0" height="0">
-        
-        <defs>
-          <clipPath id="myClip">
-            <circle cx="1400" cy="800" r="300" />
-            <!-- New circle paths go here -->
-            
-          </clipPath>
-        </defs>
-        
-      </svg>
-
-      <!-- //////////////////////// -->
-
-
+      <button data-playing="false" class="tape-controls-play" role="switch" aria-checked="false">
+        <span>Play/Pause</span>
+      </button>
     </section>
 
-    <section id="prices">
+</div>
 
-    </section>
+  </section>
+<section id="prices">
 
-  </main>
+</section>
+
+</main>
 
 </body>
 

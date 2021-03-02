@@ -2,7 +2,8 @@
 $textColor: white;
 $secondaryFont: black;
 $menuColorBackgroundLight: #1fe1e9;
-$menuColorBackgroundMedium: red;
+$menuColorBackgroundMedium: #d34848;
+$backgroundSection2: #ffb33f;
 
 
 
@@ -56,15 +57,28 @@ ul {
     list-style: none;
 }
 
+section {
+    height: 100vh;
+}
+
 h1 {
+    @include mainFont(5rem);
     letter-spacing: 7px;
     line-height: 3.5rem;
     text-transform: uppercase;
 }
 
-section {
-    height: 100vh;
+h2 {
+    @include mainFont(5rem);
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 7px;
+    line-height: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
+
+
 
 
 
