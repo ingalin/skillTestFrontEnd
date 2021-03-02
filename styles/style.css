@@ -1165,7 +1165,6 @@ nav ul li a {
   position: absolute;
   content: '';
   height: 0.2rem;
-  top: -1rem;
   width: 100px;
 }
 

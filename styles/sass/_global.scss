@@ -7,7 +7,6 @@ $backgroundSection2: #ffb33f;
 $footerColor: #5e33d1;
 
 
-
 // Fonts
 @mixin mainFont($mainFont){
     font-family: 'Poppins', sans-serif;
@@ -40,13 +39,6 @@ body {
     color: $textColor;
     letter-spacing: 0.5rem;
 }
-
-// img {
-//     // max-width: 100%;
-//     // height: auto;
-//     // display: block;
-//     // max-height: 100%;
-// }
 
 a {
     text-decoration: none;
