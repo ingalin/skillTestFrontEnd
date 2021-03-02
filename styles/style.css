@@ -212,6 +212,20 @@ html {
           box-sizing: inherit;
 }
 
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -619,6 +633,10 @@ nav ul li a {
   color: white;
 }
 
+.buttonColor2 {
+  color: white;
+}
+
 .colorChange2 {
   background-color: black;
 }
@@ -846,6 +864,7 @@ nav ul li a {
 
 .section3, .pricesPerks {
   background-color: black;
+  min-height: 650px;
 }
 
 .section3 h2, .pricesPerks h2 {
@@ -1082,9 +1101,10 @@ nav ul li a {
 }
 
 .prices {
+  padding-top: 40px;
   background-color: black;
   height: 170vh;
-  min-height: 1000px;
+  min-height: 1400px;
 }
 
 .prices p {
@@ -1137,11 +1157,15 @@ nav ul li a {
   margin-top: 30px;
 }
 
+.decorPriceHeader {
+  position: relative;
+}
+
 .decorPriceHeader::before {
   position: absolute;
   content: '';
   height: 0.2rem;
-  bottom: 23rem;
+  top: -1rem;
   width: 100px;
 }
 
@@ -1222,4 +1246,137 @@ nav ul li a {
 
 .pricesPerks .section3Info p {
   color: black;
+}
+
+.payment {
+  min-height: 1400px;
+  height: 150vh;
+  color: black;
+  padding: 200px 0;
+}
+
+.payment h2 {
+  margin-bottom: 80px;
+}
+
+.payment h3 {
+  font-weight: normal;
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+
+.addressForm input, .addressForm label {
+  display: block;
+  width: 100%;
+}
+
+.addressForm label {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.addressForm input {
+  border: 4px solid transparent;
+  padding: 5px 15px;
+  outline: 1.5px solid black;
+}
+
+.cityPostal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cityPostal div {
+  width: 48%;
+}
+
+input:hover, input:focus {
+  border-bottom: 4px solid #5e33d1;
+}
+
+.paymnetForms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.creditInfo, .contactInfo {
+  width: 48%;
+}
+
+.selectedType {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.selectedType label {
+  padding: 5px 10px;
+}
+
+.basic {
+  color: #d34848;
+}
+
+.advanced {
+  color: #ffb33f;
+}
+
+.pro {
+  color: #1fe1e9;
+}
+
+.selectedType label {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.payment .downloadButton {
+  width: 250px;
+  height: 50px;
+  display: block;
+}
+
+.payment [class*="btn-"] {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 10px 50px;
+  margin-left: 0;
+}
+
+.payment [class*="btn-mix"]::after {
+  padding: 10px 50px;
+  top: 0.2em;
+}
+
+.terms {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  width: 48%;
+  padding-top: 50px;
+}
+
+.terms a {
+  font-weight: 700;
+  color: #5e33d1;
+}
+
+.paymentNav button {
+  color: black;
+}
+
+.paymentNav .mobileMenu button span {
+  border-left: 2px solid black;
 }
