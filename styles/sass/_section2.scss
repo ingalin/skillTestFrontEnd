@@ -1,8 +1,10 @@
 // Section 2
 .section2{
-    min-height: 100vh;
     background-color: $backgroundSection2;
     overflow: hidden;
+    span {
+        color: $backgroundSection2;
+    }
 }
 
 .clip-svg {

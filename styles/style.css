@@ -258,6 +258,7 @@ ul {
 
 section {
   height: 100vh;
+  min-height: 605px;
 }
 
 h1 {
@@ -294,6 +295,14 @@ h3:after {
   left: -80%;
   top: -2rem;
   width: 100px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 15px 0;
 }
 
 @-webkit-keyframes createBox {
@@ -656,9 +665,28 @@ nav ul li a {
   color: #ffb33f;
 }
 
+.buttonColor4 {
+  color: white;
+}
+
+.colorChange4 {
+  background-color: black;
+}
+
+.colorChange4 li:focus-within a, .colorChange4 li:hover a {
+  color: #1fe1e9;
+}
+
+.headerMenuDrop .mobileMenu .buttonColor4:focus-within span {
+  border-left: 2px solid #1fe1e9;
+}
+
+.buttonColor4:focus-within {
+  color: #1fe1e9;
+}
+
 .section1, .section2 {
   background-color: #d34848;
-  min-height: 605px;
   padding: 30px 0;
 }
 
@@ -712,7 +740,7 @@ nav ul li a {
   width: 40%;
 }
 
-.section1 .button, .section2 .button {
+.section1 .button, .section2 .button, .section4 .button {
   display: block;
   position: relative;
   -webkit-appearance: none;
@@ -785,9 +813,12 @@ nav ul li a {
 }
 
 .section2 {
-  min-height: 100vh;
   background-color: #ffb33f;
   overflow: hidden;
+}
+
+.section2 span {
+  color: #ffb33f;
 }
 
 .clip-svg {
@@ -828,12 +859,17 @@ nav ul li a {
 }
 
 .section3 {
-  min-height: 100vh;
   background-color: black;
 }
 
 .section3 h2 {
-  margin-bottom: 100px;
+  margin: 100px 0 60px;
+}
+
+.section3 p {
+  font-weight: 1.8rem;
+  letter-spacing: 1px;
+  color: white;
 }
 
 .section3Info {
@@ -847,6 +883,9 @@ nav ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .section3TextGroups {
@@ -860,12 +899,6 @@ nav ul li a {
 
 .section3TextGroups div {
   width: 24%;
-}
-
-.section3TextGroups p {
-  font-weight: 1.8rem;
-  letter-spacing: 1px;
-  color: white;
 }
 
 .text1 h3 {
@@ -890,4 +923,123 @@ nav ul li a {
 
 .text3 h3::after {
   background: #ffb33f;
+}
+
+.section3 a {
+  width: 250px;
+  height: 45px;
+}
+
+.section3 [class*="btn-"] {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.section3 [class*="btn-mix"]::after {
+  padding: 10px 40px;
+  top: 0.1em;
+}
+
+.section4 {
+  background-color: #1fe1e9;
+  padding-top: 30px;
+}
+
+.section4 p {
+  font-weight: 1.8rem;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.section4 h2 {
+  margin-bottom: 60px;
+}
+
+.section4 figure {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: -40px 50px 0 0;
+}
+
+.section4 figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  max-height: 100%;
+}
+
+.section4 i {
+  color: black;
+  font-size: 1.8rem;
+}
+
+.section4 span {
+  color: #1fe1e9;
+}
+
+.textImgSection4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 300px;
+}
+
+.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.eachReview {
+  width: 24%;
+}
+
+.download {
+  height: 60vh;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.download h2 {
+  color: #d34848;
+}
+
+.download p {
+  font-size: 3.5rem;
+}
+
+.download span {
+  border-left: 5px solid #d34848;
+  margin-left: 5px;
+  padding-left: 8px;
+}
+
+.download a {
+  margin-top: 40px;
+}
+
+.footerFirstpart {
+  background-color: black;
 }

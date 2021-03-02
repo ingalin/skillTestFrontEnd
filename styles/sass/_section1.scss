@@ -1,7 +1,6 @@
 // Section 1 & 2
 .section1, .section2 {
     background-color: $menuColorBackgroundMedium;
-    min-height: 605px;
     padding: 30px 0;
     button {
         background-color: transparent;
@@ -43,7 +42,7 @@
 
 // Buttons Section 1
 
-.section1 .button, .section2 .button {
+.section1 .button, .section2 .button, .section4 .button {
   display: block;
   position: relative;
   -webkit-appearance: none;

@@ -1,0 +1,26 @@
+.download {
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+        color: $menuColorBackgroundMedium;
+    }
+    p {
+        font-size: 3.5rem;
+    }
+    span {
+        border-left: 5px solid $menuColorBackgroundMedium;
+        margin-left: 5px;
+        padding-left: 8px;
+    }
+    a {
+        margin-top: 40px;
+    }
+}
+
+.footerFirstpart {
+    background-color: $secondaryFont;
+
+}

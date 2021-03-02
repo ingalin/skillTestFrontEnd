@@ -50,10 +50,10 @@
           <!-- Desktop menu -->
           <ul class="mobileSubMenu colorChange1" id="block">
             <li>
-              <a href="#"><span class="activeNav">what is it</span></a>
+              <a href="#about"><span class="activeNav">what is it</span></a>
             </li>
             <li>
-              <a href="#">perks</a>
+              <a href="#perks">perks</a>
             </li>
             <li>
               <a href="#prices">pricing</a>
@@ -86,15 +86,13 @@
     </div>
   </header>
   <main>
-    <section class="section1">
+    <section class="section1" id="about">
       <div class="wrapper">
-
         <div class="tryOutButton">
           <a href="#prices" class="button">
             <span>try it now</span>
           </a>
         </div>
-
         <div class="textImg">
           <div class="textSec1">
             <h2>superior sound</h2>
@@ -103,7 +101,6 @@
               <span>see demo</span>
             </a>
           </div>
-
           <div class="imgSec1">
             <audio src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3" crossorigin="anonymous"></audio>
             <button data-playing="false" class="tape-controls-play  png" role="switch" aria-checked="false"
@@ -115,7 +112,6 @@
         </div>
       </div>
     </section>
-
     <section class="section2">
       <div class="wrapper section2Text">
         <div class="tryOutButton">
@@ -133,9 +129,6 @@
           </div>
         </div>
       </div>
-
-
-
       <img class="clip-svg png" src="images/sam-moqadam-CwCXGST3a7Q-unsplash.jpg" alt="Photo of the Concert">
       <svg version="1.1" id="circle" width="0" height="0">
         <defs>
@@ -146,9 +139,9 @@
         </defs>
       </svg>
     </section>
-    <section class="section3">
+    <section class="section3" id="perks">
       <div class="wrapper section3Info">
-        <a href="#prices" class="btn-mix-noborder" data-text="try it now">try it now</a>
+        <a href="#prices" class="btn-mix-noborder" data-text="try it now" aria-label="try it now"></a>
         <div>
           <h2>perks</h2>
           <div class="section3TextGroups">
@@ -168,13 +161,70 @@
         </div>
       </div>
     </section>
-
-    <section id="prices">
-
+    <section class="section4">
+      <div class="wrapper section2Text">
+        <div class="tryOutButton">
+          <a href="#prices" class="button">
+            <span>try it now</span>
+          </a>
+        </div>
+        <div class="textImgSection4">
+          <figure>
+            <img src="images/music-speaker.png" alt="Photo of music speakers" />
+          </figure>
+          <div class="secFourText">
+            <h2>reviews</h2>
+            <div class="reviews">
+              <div class="eachReview">
+                <div class="stars" aria-label="Five stars">
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                </div>
+                <h4>Artist</h4>
+                <p>"Love it, it's the Best! I can't live without it!"</p>
+              </div>
+              <div class="eachReview">
+                <div class="stars" aria-label="Five stars">
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                </div>
+                <h4>producer</h4>
+                <p>"Love it, it's the Best! I can't live without it!"</p>
+              </div>
+              <div class="eachReview">
+                <div class="stars" aria-label="Five stars">
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                </div>
+                <h4>music fan</h4>
+                <p>"Love it, it's the Best! I can't live without it!"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
   </main>
-
+  <footer>
+    <div class="footerFirstpart">
+    <div class="download wrapper">
+        <div>
+          <h2>get exp<span>con</span> now</h2>
+          <p>Purchase and download the app</p>
+        </div>
+        <a href="#prices" class="btn-mix-noborder" data-text="try it now">try it now</a>
+    </div>
+    </div>
+  </footer>
 </body>
 
 </html>
